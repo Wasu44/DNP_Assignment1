@@ -8,6 +8,38 @@ public class PostInMemoryRepository : IPostRepository
 {
     private readonly List<Post> posts = new();
     
+    public PostInMemoryRepository()
+    {
+        posts.Add(new Post
+        {
+            Id = 1,
+            Title = "Getting Started with C# and .NET 8",
+            Body = "C# provides great features for building robust console apps and web backends.",
+            UserId = 1
+        });
+        posts.Add(new Post
+        {
+            Id = 2,
+            Title = "Why Repository Pattern Matters",
+            Body = "Separating data access logic from UI makes your code testable and easy to maintain.",
+            UserId = 2
+        });
+        posts.Add(new Post
+        {
+            Id = 3,
+            Title = "Debugging in Rider vs VS Code",
+            Body = "What are your favorite keyboard shortcuts when debugging asynchronous code?",
+            UserId = 4
+        });
+        posts.Add(new Post
+        {
+            Id = 4,
+            Title = "Async and Await Best Practices",
+            Body = "Always avoid async void unless you are writing event handlers!",
+            UserId = 1
+        });
+    }
+    
     public Task<Post> AddAsync(Post post)
     {
         post.Id = posts.Any()
