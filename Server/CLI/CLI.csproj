@@ -9,7 +9,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Entity\Entity.csproj" />
-      <ProjectReference Include="..\InMemoryRepositories\InMemoryRepositories.csproj" />
+      <ProjectReference Include="..\FIleRepository\FIleRepository.csproj" />
       <ProjectReference Include="..\RepositorContracts\RepositorContracts.csproj" />
     </ItemGroup>
 
